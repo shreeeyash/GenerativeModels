@@ -1,1 +1,1 @@
-# GenerativeModels
+# Variational Autoencoders
