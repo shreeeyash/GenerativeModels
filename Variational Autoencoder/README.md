@@ -13,3 +13,8 @@ The basic difference difference comes in terms of *Explicit & Implicit density f
 As described, task in GAN is not to pridict any probability distribution. Rather the task is to sample images from generative network that are similar to images in dataset. Hence here our model is learning an **Implicit Density Function** in terms of parameters of generative network.</p>
 Task of variational autoencoder is somewhat different. VAE take the real image from dataset as input and tries to find the hidden probability density function in terms of mean and variance(assuming latent code to be gaussian distributed). Hence in VAE we are predicting an **Explicit Density Function** in terms of mean and variance as shown in figure below.
 ![VAE](https://i.imgur.com/ZN6MyTx.png)
+
+### Problem of Intractability
+
+To visualize the problem of intractability, we may use distribution of digits in MNIST dataset as shown below.
+![mnist_intractable](https://cdn-images-1.medium.com/max/975/1*-i8cp3ry4XS-05OWPAJLPg.png)
