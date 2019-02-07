@@ -17,4 +17,7 @@ Task of variational autoencoder is somewhat different. VAE take the real image f
 ### Problem of Intractability
 
 To visualize the problem of intractability, we may use distribution of digits in MNIST dataset as shown below.
-![mnist_intractable](https://cdn-images-1.medium.com/max/975/1*-i8cp3ry4XS-05OWPAJLPg.png)
+<img src="https://cdn-images-1.medium.com/max/975/1*-i8cp3ry4XS-05OWPAJLPg.png" width="500">
+As we want our model to be able to generate images that lie somewhere inbetween different classes of digits, we may face problem of Intractability. If the space has discontinuities (eg. gaps between clusters) and you sample/generate a variation from there, the decoder will simply generate an unrealistic output, because the decoder has no idea how to deal with that region of the latent space.  
+
+
