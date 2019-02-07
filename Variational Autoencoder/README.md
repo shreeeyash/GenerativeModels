@@ -24,5 +24,6 @@ Another reason for Intractability of this function may be due to *High dimension
 
 ### The reparameterization trick
 
-One of the most important aspects of VAE was *The reparameterization trick*.
+One of the most important aspects of VAE was *The reparameterization trick*.</br>
+<img src="http://bjlkeng.github.io/images/autoencoder_reparam_trick.png">
 
