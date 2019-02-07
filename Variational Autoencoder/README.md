@@ -20,5 +20,6 @@ To visualize the problem of intractability, we may use distribution of digits in
 <img src="https://cdn-images-1.medium.com/max/975/1*-i8cp3ry4XS-05OWPAJLPg.png" width="500"></br>
 As we want our model to be able to generate images that lie somewhere inbetween different classes of digits, we may face problem of Intractability. If the space has discontinuities (eg. gaps between clusters) and you sample/generate a variation from there, the decoder will simply generate an unrealistic output, because the decoder has no idea how to deal with that region of the latent space.  We can thus say that q(z|x) may not be continuous between different clusters and that will lead to intractable function.</br>
 <img src="https://image.slidesharecdn.com/160625tokyowebmining2-160624151348/95/vaetype-deep-generative-models-9-638.jpg?cb=1466781926"> </br>
+Another reason for Intractability of this function may be due to *High dimensional space integral of z*. If z is a high dimensional vector then it will be computationally expensive and difficult to perform multiple integrals over each dimension.
 
 
