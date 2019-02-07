@@ -8,4 +8,5 @@ As illustrated in image above, we encode **x** in **z** (generally z is lower di
 
 ### Difference between Variational Autoencoder(VAE) and Generative Adversarial Networks(GAN)
 
-The basic difference difference comes in terms of *Explicit & Implicit density functions*.
+The basic difference difference comes in terms of *Explicit & Implicit density functions*. GAN works on principle of game theory. The two players are Generator and Discriminator networks. Generator is a deep neural network whose task is to generate images that are indistinguishable from the images sampled from real dataset. whereas discriminator tries to panalize fake images(that are coming from generator network rather than original dataset).
+![GAN](https://skymind.ai/images/wiki/GANs.png)
