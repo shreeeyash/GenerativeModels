@@ -32,15 +32,15 @@ class VAE(nn.Module):
         a1 = F.relu(self.l1(x))
         return self.l21(a1), self.l22(a1)
 
-    # ask how do we decide whether its learning var or sigma??
+    
     def Reparameterize(self, mu, log_var):
         std = torch.exp(0.5 * log_var)
-        epsilon = torch.randn_like(std)  # why not std.size()???
+        epsilon = torch.randn_like(std)  
         return epsilon.mul(std).add_(mu)
 
     def Decode(self, z):
         a3 = F.relu(self.l3(z))
-        return torch.sigmoid(self.l4(a3))  # ask why taking sigmoid here???
+        return torch.sigmoid(self.l4(a3))  
 
     def Forward(self, x):
         mu, log_var = self.Encoder(x.view(-1, 784))
@@ -57,7 +57,7 @@ optimizer = optim.Adam(vae.parameters(), lr=0.001)
 def Loss(recons_x, x, mu, log_var):
     #recon_loss = (recons_x-x.view(-1,784)).pow(2).mean() ~~compare KLD and P(x|z) losses
     #recon_loss = torch.sum((recons_x-x.view(-1,784)).pow(2))
-    recon_loss = F.binary_cross_entropy(recons_x, x.view(-1, 784), reduction='sum')  # why binary & not categorical??
+    recon_loss = F.binary_cross_entropy(recons_x, x.view(-1, 784), reduction='sum') 
     Dkl = 0.5 * torch.sum(log_var.exp() + mu.pow(2) - 1 - log_var)
     return recon_loss + Dkl
 
@@ -65,12 +65,12 @@ def Loss(recons_x, x, mu, log_var):
 
 
 def train(epoch):
-    vae.train()   # why vae.train() here???
+    vae.train()   
     train_loss = 0
     for batch_idx, (data, _) in enumerate(train_loader):
         data = data.to(device)
         optimizer.zero_grad()
-        recons_batch, mu, log_var = vae.Forward(data) # why not vae.forward()????
+        recons_batch, mu, log_var = vae.Forward(data) 
         loss = Loss(recons_batch, data, mu, log_var)
         loss.backward()
         train_loss += loss.item()
