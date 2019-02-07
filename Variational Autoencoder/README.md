@@ -22,4 +22,7 @@ As we want our model to be able to generate images that lie somewhere inbetween 
 <img src="https://image.slidesharecdn.com/160625tokyowebmining2-160624151348/95/vaetype-deep-generative-models-9-638.jpg?cb=1466781926"> </br>
 Another reason for Intractability of this function may be due to *High dimensional space integral of z*. If z is a high dimensional vector then it will be computationally expensive and difficult to perform multiple integrals over each dimension.
 
+### The reparameterization trick
+
+One of the most important aspects of VAE was *The reparameterization trick*.
 
