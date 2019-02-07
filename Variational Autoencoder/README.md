@@ -10,4 +10,6 @@ As illustrated in image above, we encode **x** in **z** (generally z is lower di
 
 The basic difference difference comes in terms of *Explicit & Implicit density functions*. GAN works on principle of game theory. The two players are Generator and Discriminator networks. Generator is a deep neural network whose task is to generate images that are indistinguishable from the images sampled from real dataset. whereas discriminator tries to panalize fake images(that are coming from generator network rather than original dataset).
 ![GAN](https://skymind.ai/images/wiki/GANs.png)
-As described, task in GAN is not to pridict any probability distribution. Rather the task is to sample images from generative network that are similar to images in dataset. Hence here our model is learning an *Implicit Density Function* in terms of parameters of generative network.
+As described, task in GAN is not to pridict any probability distribution. Rather the task is to sample images from generative network that are similar to images in dataset. Hence here our model is learning an *Implicit Density Function* in terms of parameters of generative network.</p>
+Task of variational autoencoder is somewhat different. VAE take the real image from dataset as input and tries to find the hidden probability density function in terms of mean and variance(assuming latent code to be gaussian distributed). Hence in VAE we are predicting an *Explicit Density Function* in terms of mean and variance as shown in figure below.
+![VAE}(https://i.imgur.com/ZN6MyTx.png)
