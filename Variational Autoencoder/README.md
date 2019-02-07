@@ -27,4 +27,6 @@ Another reason for Intractability of this function may be due to *High dimension
 One of the most important aspects of VAE was *The reparameterization trick*.Had we been sampling directly from the distribution predicted by q(z|x), than we would not be able to perform backpropagation down to the **x**(left image). So here authors came with idea of reparameterization trick. We 1st sample some random variable **epsilon** from another standard normal distribution.</br>
 <img src="http://bjlkeng.github.io/images/autoencoder_reparam_trick.png"></br>
  These random epsilon's are multiplied with variance followed by addition with mean, so here we get a new random variable sampled from predicted distribution(q(z|x)) with sampling procedure kept out of network. So hence we may overcome the problem of backpropagation through sampling method.
+ 
+ ## Observations and Results
 
