@@ -33,5 +33,6 @@ One of the most important aspects of VAE was *The reparameterization trick*.Had 
 ![](https://github.com/Shreeyash-iitr/GenerativeModels/blob/master/Variational%20Autoencoder/results/MSEloss_torch_sum.gif)</br>
 **(2)** Using Mean Squared loss and using mean of loss over mini batches. Note that here MSE is reconstruction error and KL-divergence error is in-range (magnitude wise) with reconstruction loss.</br>
 ![](https://github.com/Shreeyash-iitr/GenerativeModels/blob/master/Variational%20Autoencoder/results/MSEloss_torch_mean.gif)
-**(3)** Using Binary crossentropy, so no need of rescaling the loss to same range.
-![](https://github.com/Shreeyash-iitr/GenerativeModels/blob/master/Variational%20Autoencoder/results/binary_crossentropy_nn.gif)
+</br>
+**(3)** Using Binary crossentropy, so no need of rescaling the loss to same range.</br>
+![](https://github.com/Shreeyash-iitr/GenerativeModels/blob/master/Variational%20Autoencoder/results/binary_crossentropy_nn.gif)</br>
