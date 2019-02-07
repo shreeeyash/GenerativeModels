@@ -29,5 +29,5 @@ One of the most important aspects of VAE was *The reparameterization trick*.Had 
  These random epsilon's are multiplied with variance followed by addition with mean, so here we get a new random variable sampled from predicted distribution(q(z|x)) with sampling procedure kept out of network. So hence we may overcome the problem of backpropagation through sampling method.
  
  ## Observations and Results
-**(1)** Using Mean Squared loss and using sum of loss across different dimension. Note that here MSE is reconstruction error and KL-divergence error is not in-range (magnitude wise) with reconstruction loss.
-
+**(1)** Using Mean Squared loss and using sum of loss over mini batches. Note that here MSE is reconstruction error and KL-divergence error is not in-range (magnitude wise) with reconstruction loss.
+![](https://github.com/Shreeyash-iitr/GenerativeModels/blob/master/Variational%20Autoencoder/results/MSEloss_torch_sum.gif)
