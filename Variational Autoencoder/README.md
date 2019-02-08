@@ -30,9 +30,11 @@ One of the most important aspects of VAE was *The reparameterization trick*.Had 
  
  ## Observations and Results
 **(1)** Using Mean Squared loss and using sum of loss over mini batches. Note that here MSE is reconstruction error and KL-divergence error is not in-range (magnitude wise) with reconstruction loss.</br>
-![](https://github.com/Shreeyash-iitr/GenerativeModels/blob/master/Variational%20Autoencoder/results/MSEloss_torch_sum.gif)</br>
+![](https://github.com/Shreeyash-iitr/GenerativeModels/blob/master/Variational%20Autoencoder/results/MSEloss_torch_sum.gif)</br></br>
 **(2)** Using Mean Squared loss and using mean of loss over mini batches. Note that here MSE is reconstruction error and KL-divergence error is in-range (magnitude wise) with reconstruction loss.</br>
 ![](https://github.com/Shreeyash-iitr/GenerativeModels/blob/master/Variational%20Autoencoder/results/MSEloss_torch_mean.gif)
-</br>
+</br></br>
 **(3)** Using Binary crossentropy, so no need of rescaling the losses to same range.</br>
-![](https://github.com/Shreeyash-iitr/GenerativeModels/blob/master/Variational%20Autoencoder/results/binary_crossentropy_nn.gif)</br>
+![](https://github.com/Shreeyash-iitr/GenerativeModels/blob/master/Variational%20Autoencoder/results/binary_crossentropy_nn.gif)</br></br>
+**(4)** If Reconstruction loss is set to zero and KLD loss is left as it is, Then following random images were obtained.
+![](https://github.com/Shreeyash-iitr/GenerativeModels/blob/master/Variational%20Autoencoder/recons_set_to_zero.gif)</br></br>
