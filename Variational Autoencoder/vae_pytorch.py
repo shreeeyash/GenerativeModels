@@ -58,7 +58,9 @@ def Loss(recons_x, x, mu, log_var):
     #recon_loss = (recons_x-x.view(-1,784)).pow(2).mean() ~~compare KLD and P(x|z) losses
     #recon_loss = torch.sum((recons_x-x.view(-1,784)).pow(2))
     recon_loss = F.binary_cross_entropy(recons_x, x.view(-1, 784), reduction='sum') 
+    #recon_loss = 0.0
     Dkl = 0.5 * torch.sum(log_var.exp() + mu.pow(2) - 1 - log_var)
+    #Dkl = 0.0
     return recon_loss + Dkl
 
 #================ Training ====================================================================
