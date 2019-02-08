@@ -53,10 +53,10 @@ class VAE(nn.Module):
 
         return mu, log_var
 
-    # ask how do we decide whether its learning var or sigma??
+    
     def Reparameterize(self, mu, log_var):
         std = torch.exp(0.5 * log_var)
-        epsilon = torch.randn_like(std)  # why not std.size()???
+        epsilon = torch.randn_like(std) 
         return epsilon.mul(std).add_(mu)
 
     def Decode(self, z):
@@ -65,7 +65,7 @@ class VAE(nn.Module):
         d2 = d2.view(-1, 128, 7, 7)
         d3 = F.relu(self.deconv1(d2))
         d4 = self.deconv2(d3)
-        return torch.sigmoid(d4)  # ask why taking sigmoid here???
+        return torch.sigmoid(d4) 
 
     def Forward(self, x):
         mu, log_var = self.Encoder(x.view(-1, 1, 28, 28))
@@ -82,9 +82,10 @@ optimizer = optim.Adam(vae.parameters(), lr=0.001)
 def Loss(recons_x, x, mu, log_var):
     #recon_loss = (recons_x-x.view(-1,784)).pow(2).mean()
     #recon_loss = torch.sum((recons_x-x.view(-1,784)).pow(2))
-    recon_loss = F.binary_cross_entropy(
-        recons_x.view(-1, 784), x.view(-1, 784), reduction='sum')  # why binary & not categorical??
+    recon_loss = F.binary_cross_entropy(recons_x.view(-1, 784), x.view(-1, 784), reduction='sum') 
+    #recon_loss = 0.0
     Dkl = 0.5 * torch.sum(log_var.exp() + mu.pow(2) - 1 - log_var)
+    #Dkl = 0.0
     return recon_loss + Dkl
 
 #================ Training ====================================================================
