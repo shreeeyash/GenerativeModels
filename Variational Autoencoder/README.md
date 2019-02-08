@@ -39,5 +39,5 @@ One of the most important aspects of VAE was *The reparameterization trick*.Had 
 ![](https://github.com/Shreeyash-iitr/GenerativeModels/blob/master/Variational%20Autoencoder/results/binary_crossentropy_nn.gif)</br></br>
 **(4)** If Reconstruction loss is set to zero and KLD loss is left as it is, Then following random images were obtained. Aso the total loss(recon_loss + KLD) became zero after only ~40 iterations(with 128  minibatch size).
 ![](https://github.com/Shreeyash-iitr/GenerativeModels/blob/master/Variational%20Autoencoder/results/recons_set_to_zero.gif)</br></br>
-**(5)** Similar to 4th experiment, this time DKL loss was set to zero while reconstruction loss was left as it is or we can say only reconstruction loss was used to train the model.
+**(5)** Similar to 4th experiment, this time DKL loss was set to zero while reconstruction loss was left as it is or we can say only reconstruction loss was used to train the model.</br>
 ![](https://github.com/Shreeyash-iitr/GenerativeModels/blob/master/Variational%20Autoencoder/results/DKL_set_to_zero.gif)</br></br>
