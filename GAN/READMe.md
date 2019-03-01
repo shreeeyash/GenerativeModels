@@ -4,5 +4,5 @@ The main problem during training of GAN arises due to awkward value of divergenc
 ![](https://cdn-images-1.medium.com/max/1300/1*xRjphX2OGhfDllYFIkabzw.png)</br>
 
 #### Results 
-Following images were obtained using standard GAN hacks and after 10 epochs.</br>
+Following images were obtained using standard GAN hacks and after 7 epochs.</br>
 ![](https://github.com/Shreeyash-iitr/GenerativeModels/blob/master/GAN/colab/generation_animation.gif)</br>
