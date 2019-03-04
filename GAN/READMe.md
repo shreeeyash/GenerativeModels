@@ -26,6 +26,6 @@ Blue - 100 epoch</br>
 ![](https://github.com/Shreeyash-iitr/GenerativeModels/blob/master/GAN/results/discriminator.png)</br>
 
 
-#### Last Epoch Generated Image
+#### Generated Image after Last Epoch 
 
 ![](https://github.com/Shreeyash-iitr/GenerativeModels/blob/master/GAN/results/Pokemon%20Generated%20Images/individualImage.png)</br>
