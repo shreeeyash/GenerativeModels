@@ -11,6 +11,21 @@ The main problem during training of GAN arises due to awkward value of divergenc
 I used Pokemon dataset having 4200 images of different pokemons for training DC-GAN. SGD with momentum is used for discriminator and Adam optimizer is used for generator network. Learning rate was set to 0.0002 as mentioned in DC-GAN paper. The following gif shows images after each 5 epochs of training. Model was trained for 125 epochs. Final images look similar to newly created pokemons but is not clear due to lesser amount of data available.</br>
 ![](https://github.com/Shreeyash-iitr/GenerativeModels/blob/master/GAN/results/pokemon.gif)</br>
 
+#### Generator Loss
+Green - 20 epoch </br>
+Orange - 50 epoch </br>
+Blue - 100 epoch</br>
+</br>
+![](https://github.com/Shreeyash-iitr/GenerativeModels/blob/master/GAN/results/generator.png)</br>
+
+#### Discriminator Loss
+Green - 20 epoch </br>
+Orange - 50 epoch </br>
+Blue - 100 epoch</br>
+</br>
+![](https://github.com/Shreeyash-iitr/GenerativeModels/blob/master/GAN/results/discriminator.png)</br>
+
+
 #### Last Epoch Generated Image
 
 ![](https://github.com/Shreeyash-iitr/GenerativeModels/blob/master/GAN/results/Pokemon%20Generated%20Images/individualImage.png)</br>
