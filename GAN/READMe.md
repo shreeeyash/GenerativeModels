@@ -9,4 +9,4 @@ The main problem during training of GAN arises due to awkward value of divergenc
 
 #### Results 
 Following images were obtained using standard GAN hacks and after 7 epochs.</br>
-![](https://github.com/Shreeyash-iitr/GenerativeModels/blob/master/GAN/colab/generation_animation.gif)</br>
+![](https://github.com/Shreeyash-iitr/GenerativeModels/blob/master/GAN/results/pokemon.gif)</br>
