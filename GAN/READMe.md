@@ -1,6 +1,6 @@
 # Generative adversarial network
 #### Used Model 
-</br> ![](https://github.com/Shreeyash-iitr/GenerativeModels/blob/master/GAN/pytorch_GAN.png) </br>
+</br> ![](https://github.com/Shreeyash-iitr/GenerativeModels/blob/master/GAN/dcgan.png) </br>
 
 
 ####  Problems with learning GAN
